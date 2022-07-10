@@ -163,6 +163,7 @@ impl DllRef
         Ok(remote_module.get_remote_base() + (local_offset as usize))
     }
 
+    /// read a signature string format and convert it into signature slice
     fn signature_from_string(sig: &str) -> anyhow::Result<Vec<SignatureItem>>
     {
         // convert "XX ?? ?? YY ZZ ??" into a signature
